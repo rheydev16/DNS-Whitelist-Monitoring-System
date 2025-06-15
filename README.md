@@ -59,13 +59,13 @@ def is_whitelisted(domain, whitelist):
             return True
     return False
 
-```python
 
 if hasattr(packet.dns, 'qry_name'):
     domain = packet.dns.qry_name
     if not is_whitelisted(domain, whitelist):  # <-- WHITELIST CHECK HAPPENS HERE
+```
 
-🔍 What this code does:
+## 🔍 What this code does:
 
 * Load Whitelist: Reads approved domains (like facebook.com) from a file into a list
 
