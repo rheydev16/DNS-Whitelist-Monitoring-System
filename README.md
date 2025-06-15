@@ -20,13 +20,13 @@ This project was created as part of my internship to demonstrate basic network m
 ---
 
 ## 📁 File Structure
-
+```text
 dns-whitelist-monitor/
 ├── main.py # Main Python script to run the monitoring tool
 ├── whitelist.txt # Text file containing the list of allowed domains
 ├── README.md # Project documentation
 └── logs/ # (Optional) Folder for storing alert logs
-
+```
  ---
 
 
@@ -51,7 +51,7 @@ def load_whitelist(filename):
     with open(filename, 'r') as f:
         return [line.strip().lower() for line in f if line.strip()]
 
-```python
+
 def is_whitelisted(domain, whitelist):
     domain = domain.lower()
     for allowed in whitelist:
